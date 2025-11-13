@@ -1,5 +1,4 @@
-# EdgeVision - Real-Time Edge Detection Viewer
-
+# Real-Time-Edge-Detection-Viewer
 A minimal Android application that captures camera frames, processes them using OpenCV in C++ (via JNI), displays the processed output using OpenGL ES, and includes a TypeScript-based web viewer for real-time frame display.
 
 ---
@@ -245,11 +244,13 @@ adb shell ip addr show wlan0
 
 EdgeVision implements a **multi-layered architecture** with clear separation of concerns:
 
-![High-Level Architecture](assets/Architecture.png)
+
+<img width="761" height="740" alt="Architecture" src="https://github.com/user-attachments/assets/ec750443-08d1-40ea-b64b-237913223622" />
+
 
 ### Data Flow Pipeline
+<img width="393" height="783" alt="DataFlow" src="https://github.com/user-attachments/assets/5b94f90e-b753-4b96-9f12-7447bb874b9d" />
 
-![Data Flow Pipeline](assets/DataFlow.png)
 
 ### JNI Bridge
 
@@ -384,12 +385,3 @@ Real-time edge detection with WebSocket streaming from Android to web viewer.
    - Enter IP shown in app
    - Click CONNECT
    - Watch real-time frames
-
----
-
-## Author
-
-**Mudit Sharma**
-#   d e t e c t i o n 
- 
- 
