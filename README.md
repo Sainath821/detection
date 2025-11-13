@@ -243,13 +243,12 @@ adb shell ip addr show wlan0
 ### High-Level Architecture
 
 EdgeVision implements a **multi-layered architecture** with clear separation of concerns:
-
-
-<img width="761" height="740" alt="Architecture" src="https://github.com/user-attachments/assets/ec750443-08d1-40ea-b64b-237913223622" />
+<img width="761" height="740" alt="Architecture" src="https://github.com/user-attachments/assets/a95f4f35-cca2-4319-abf5-14528dc58ad0" />
 
 
 ### Data Flow Pipeline
-<img width="393" height="783" alt="DataFlow" src="https://github.com/user-attachments/assets/5b94f90e-b753-4b96-9f12-7447bb874b9d" />
+
+<img width="393" height="783" alt="DataFlow" src="https://github.com/user-attachments/assets/a8f2ce69-d1b0-47e2-902f-00b9a6137e00" />
 
 
 ### JNI Bridge
