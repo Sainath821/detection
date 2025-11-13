@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdgeVision Web Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>EdgeVision Web Viewer</h1>
+            <p class="subtitle">Real-time Edge Detection Frame Display</p>
+        </header>
+
+        <div class="connection-panel">
+            <h2>WebSocket Connection</h2>
+            <div class="connection-controls">
+                <div class="input-group">
+                    <label for="serverIp">Android Device IP:</label>
+                    <input type="text" id="serverIp" placeholder="192.168.1.100" value="">
+                </div>
+                <div class="input-group">
+                    <label for="serverPort">Port:</label>
+                    <input type="number" id="serverPort" value="8888">
+                </div>
+                <button id="connectBtn" class="btn-primary">Connect</button>
+                <button id="disconnectBtn" class="btn-secondary" disabled>Disconnect</button>
+            </div>
+            <div class="connection-status">
+                <span class="status-label">Status:</span>
+                <span id="connectionStatus" class="status-value status-disconnected">Disconnected</span>
+            </div>
+        </div>
+
+        <main>
+            <div class="frame-display">
+                <canvas id="frameCanvas" width="1280" height="720"></canvas>
+                <div class="no-frame-message" id="noFrameMessage">
+                    No frame loaded yet. Sample processed frame will be displayed.
+                </div>
+            </div>
+
+            <div class="stats-panel">
+                <h2>Frame Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">Resolution:</span>
+                        <span class="stat-value" id="resolution">1280 x 720</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Format:</span>
+                        <span class="stat-value" id="format">Grayscale (Canny Edge)</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Processing:</span>
+                        <span class="stat-value" id="processing">OpenCV C++</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Frame Size:</span>
+                        <span class="stat-value" id="frameSize">921,600 bytes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">FPS:</span>
+                        <span class="stat-value" id="fps">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Last Updated:</span>
+                        <span class="stat-value" id="lastUpdated">-</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>🤖 Generated with EdgeVision - OpenCV + OpenGL ES Real-time Processing</p>
+            <p class="author">By Mudit Sharma</p>
+        </footer>
+    </div>
+
+    <script type="module" src="dist/index.js"></script>
+</body>
+</html>
